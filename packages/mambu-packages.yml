@@ -1,0 +1,40 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/orgs/mambu-gmbh/repositories
+note: >-
+  First-party Mambu libraries and tools published on the mambu-gmbh GitHub
+  organization. The historical Java client library is archived (read-only, no
+  longer maintained) but was the official SDK; the Streaming API sample client
+  and the MMCP homebrew distribution are current. Mambu does not publish
+  first-party SDKs for other languages; the current guidance is to call the REST
+  API v2 directly (docs at https://api.mambu.com/).
+packages:
+  - language: java
+    registry: github
+    name: Mambu-APIs-Java
+    url: https://github.com/mambu-gmbh/Mambu-APIs-Java
+    license: Apache-2.0
+    official: true
+    archived: true
+    targets: Mambu API V9.6
+    notes: >-
+      Official Java client library for the Mambu REST APIs. Archived and no
+      longer maintained; distributed as JARs (Mambu-APIs-Java-9.8-bin.jar plus
+      httpclient/httpcore/gson/commons dependencies), built with Maven.
+  - language: java
+    registry: github
+    name: Streaming-API-Java-Sample-Client
+    url: https://github.com/mambu-gmbh/Streaming-API-Java-Sample-Client
+    official: true
+    archived: false
+    notes: Official Java sample client for the Mambu Streaming API.
+  - language: shell
+    registry: homebrew
+    name: mmcp
+    url: https://github.com/mambu-gmbh/mmcp-brew
+    install: brew tap mambu-gmbh/mmcp-brew https://github.com/mambu-gmbh/mmcp-brew && brew install mmcp
+    official: true
+    archived: false
+    notes: >-
+      Homebrew distribution of MMCP, the official Mambu MCP server (see
+      mcp/mambu-mcp.yml). Ships the Mambu Banking Platform V2 API catalog.

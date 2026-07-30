@@ -1,0 +1,19 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.mambu.com/api/
+versioning:
+  scheme: uri-path
+  current: v2
+  docs: https://docs.mambu.com/api/pages/api-v2/welcome/
+deprecation:
+  policy: >-
+    Mambu API v1 is deprecated and scheduled for removal; consumers are directed
+    to migrate to API v2. Deprecations are announced through release notes.
+  deprecated_versions: [v1]
+  docs: https://docs.mambu.com/api/
+sla:
+  url: https://status.mambu.com/
+  notes: Uptime commitments are contractual (per-tenant plan); no public numeric target published.
+status_page: https://status.mambu.com/
+release_notes: https://docs.mambu.com/release-notes/
+deprecated_operations: []

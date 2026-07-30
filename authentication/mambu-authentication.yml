@@ -1,0 +1,30 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.mambu.com/api/pages/api-v2/authentication/
+docs: https://docs.mambu.com/api/pages/api-v2/authentication/
+summary:
+  types: [http, apiKey]
+  api_key_in: [header]
+  oauth2_flows: []
+  notes: >-
+    Mambu API v2 has no OAuth2 surface. Requests authenticate over HTTPS with
+    either HTTP Basic auth (Mambu UI username:password, base64 encoded) or an
+    API key supplied in the apikey request header. API keys are an Early Access
+    feature enabled via a Mambu Customer Success Manager.
+schemes:
+  - name: basicAuth
+    type: http
+    scheme: basic
+    description: >-
+      HTTP Basic authentication using a Mambu user's UI login credentials in the
+      Authorization header as "Basic {base64(username:password)}". The user must
+      hold a role/permissions with API access. HTTPS is required.
+    sources: [https://docs.mambu.com/api/pages/api-v2/authentication/]
+  - name: apiKeyAuth
+    type: apiKey
+    in: header
+    parameter_name: apikey
+    description: >-
+      API key token passed in the apikey header. Currently an Early Access
+      capability requiring activation through a Mambu Customer Success Manager.
+    sources: [https://docs.mambu.com/api/pages/api-v2/authentication/]

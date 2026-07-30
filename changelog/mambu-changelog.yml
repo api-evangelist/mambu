@@ -1,0 +1,26 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.mambu.com/release-notes/
+docs: https://docs.mambu.com/release-notes/
+scheme: >-
+  Mambu publishes dated release notes across several product lines: the Core
+  Banking Engine (CBE, versioned v9.x), plus separate Connectors, Notifications,
+  and Payments release streams.
+lines:
+  - name: Core Banking Engine (CBE)
+    version_series: v9.x
+    current: v9.193
+  - name: Connectors
+  - name: Notifications
+  - name: Payments
+last_seen: '2026-07-14'
+entries:
+  - line: CBE
+    version: v9.193
+    date: null
+    note: >-
+      Latest published CBE release at capture time. Per-release highlights are
+      published on individual pages (e.g. /release-notes/cbe/v9/v9-193/) and were
+      not machine-retrievable in aggregate; not enumerated here to avoid
+      fabrication.
+window: recent (v9.165 through v9.193 listed on the index)

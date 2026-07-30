@@ -1,0 +1,32 @@
+# Mambu
+
+> Mambu is a SaaS cloud banking platform — a composable, API-first core banking engine that banks, neobanks, fintechs, lenders, and non-financial brands use to build and run lending, deposit, payment, and Islamic banking products across 65+ countries for 230M+ end users. This is an API Evangelist profile generated from Mambu's public developer documentation.
+
+## APIs
+
+- [Mambu API v2](https://docs.mambu.com/api/pages/api-v2/welcome/): REST API v2, base URL https://{tenant}.mambu.com/api. HTTPS Basic auth or apikey header; Idempotency-Key supported.
+- [Mambu Payments API](https://docs.mambu.com/api/): Payment orchestration and connectivity.
+- [Mambu Streaming API](https://docs.mambu.com/api/pages/streaming/streaming-index/): Resumable cursor-based event stream (add-on).
+- [Mambu Audit Trail API](https://docs.mambu.com/api/): Audit event retrieval.
+
+## Docs
+
+- [API Reference](https://docs.mambu.com/api/)
+- [Authentication](https://docs.mambu.com/api/pages/api-v2/authentication/)
+- [Idempotency](https://docs.mambu.com/api/pages/api-v2/idempotency/)
+- [Webhooks](https://docs.mambu.com/docs/about-webhooks)
+- [Release notes](https://docs.mambu.com/release-notes/)
+- [Support / Documentation Hub](https://support.mambu.com/)
+- [Ecosystem / marketplace](https://ecosystem.mambu.com/)
+- [Status page](https://status.mambu.com/)
+
+## Artifacts
+
+- [Authentication profile](authentication/mambu-authentication.yml)
+- [API conventions](conventions/mambu-conventions.yml)
+- [Event & webhook surface](asyncapi/mambu-events.yml)
+- [Lifecycle](lifecycle/mambu-lifecycle.yml)
+- [Changelog](changelog/mambu-changelog.yml)
+- [Conformance](conformance/mambu-conformance.yml)
+- [Domain security](security/mambu-domain-security.yml)
+- [MCP (candidate)](mcp/mambu-mcp.yml)

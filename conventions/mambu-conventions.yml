@@ -1,0 +1,61 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.mambu.com/api/pages/api-v2/welcome/
+docs: https://docs.mambu.com/api/
+summary: >-
+  Cross-cutting request/response semantics for the Mambu API v2, captured from
+  the public developer documentation. Mambu is a multi-tenant cloud banking
+  platform; every request targets a tenant-scoped host.
+base_url:
+  pattern: https://{tenant}.mambu.com/api
+  notes: Tenant name is the subdomain; all endpoints sit under /api.
+authentication:
+  styles: [http-basic, apikey-header]
+  header: Authorization | apikey
+  ref: authentication/mambu-authentication.yml
+  docs: https://docs.mambu.com/api/pages/api-v2/authentication/
+idempotency:
+  supported: true
+  header: Idempotency-Key
+  key_format: UUID v4 (8-4-4-4-12 hexadecimal)
+  retention: 6 hours
+  scope: >-
+    Recommended for non-idempotent write operations (e.g. deposit transactions)
+    to prevent accidental duplication. Not recommended for GET/DELETE (already
+    idempotent). Server-side validation failures are not cached, so a repeat
+    request with the same key is processed as new.
+  docs: https://docs.mambu.com/api/pages/api-v2/idempotency/
+pagination:
+  style: offset-limit
+  params: [offset, limit]
+  detail_level:
+    param: detailsLevel
+    values: [BASIC, FULL]
+  notes: >-
+    List endpoints page with offset/limit query parameters; response verbosity
+    is controlled by the detailsLevel parameter (BASIC vs FULL).
+  docs: https://docs.mambu.com/api/
+versioning:
+  scheme: uri-path
+  current: v2
+  deprecated: [v1]
+  docs: https://docs.mambu.com/api/
+error_envelope:
+  ref: null
+  notes: >-
+    Errors are returned as JSON with an errors array; the public error reference
+    was not machine-retrievable at capture time (docs served as SPA). Not
+    captured here to avoid fabrication.
+events:
+  webhooks: true
+  streaming_api: true
+  ref: asyncapi/mambu-events.yml
+rate_limiting:
+  notes: >-
+    Mambu applies API consumption limits per tenant/plan; specific numeric
+    thresholds were not published on a machine-retrievable page at capture time.
+cross_links:
+  authentication: authentication/mambu-authentication.yml
+  lifecycle: lifecycle/mambu-lifecycle.yml
+  events: asyncapi/mambu-events.yml
+  changelog: changelog/mambu-changelog.yml

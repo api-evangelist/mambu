@@ -1,0 +1,26 @@
+generated: '2026-07-20'
+method: probed
+source: live probes of Mambu hosts
+note: >-
+  No genuine /.well-known discovery documents were found. www.mambu.com serves a
+  200 HTML SPA page for /.well-known/security.txt (soft 404, not a real RFC 9116
+  file); docs.mambu.com is a Docusaurus SPA returning 200 HTML for arbitrary
+  paths. Recorded honestly; no WellKnown/SecurityTxt pointer is wired because no
+  real document exists.
+hosts:
+  - host: https://www.mambu.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        real: false
+        reason: SPA HTML soft-404, not an RFC 9116 document
+  - host: https://api.mambu.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+  - host: https://docs.mambu.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        real: false
+        reason: Docusaurus SPA soft-404

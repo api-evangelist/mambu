@@ -1,0 +1,21 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.mambu.com/api/pages/api-v2/
+standards:
+  - id: oauth2
+    conforms: false
+    evidence: API v2 documents Basic auth and apikey-header auth only; no OAuth2 surface.
+  - id: http-basic-auth
+    conforms: true
+    evidence: RFC 7617 Basic authentication documented for API v2.
+  - id: idempotency
+    conforms: true
+    evidence: >-
+      Idempotency-Key header (UUID v4, 6-hour retention) documented for write
+      operations. See conventions/mambu-conventions.yml.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: No application/problem+json usage confirmed from public docs.
+  - id: tls
+    conforms: true
+    evidence: HTTPS required for all API requests; TLS 1.3 observed on www.mambu.com (probe).

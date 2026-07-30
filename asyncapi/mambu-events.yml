@@ -1,0 +1,35 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.mambu.com/docs/mambu-apis/
+type: Webhooks
+summary: >-
+  Mambu exposes two distinct event surfaces. (1) Customizable webhooks
+  (notifications) that POST templated payloads to a configured endpoint when
+  events occur on Mambu entities (loan accounts, deposit accounts, clients,
+  transactions, etc.), with user-defined templates and placeholders configured
+  in the Mambu UI. (2) A separate Streaming API that delivers a resumable,
+  cursor-based event stream, independent from the API and webhook
+  infrastructure, available as an add-on. No public AsyncAPI document is
+  published, so no spec is captured here (no fabrication).
+webhooks:
+  mechanism: outbound HTTP notifications with user-defined templates
+  configuration: Mambu UI (notification/webhook templates)
+  docs: https://docs.mambu.com/docs/about-webhooks
+  event_domains:
+    - loan accounts (state changes, disbursements, repayments)
+    - deposit accounts (transactions, state changes)
+    - clients and groups
+    - transactions
+  note: >-
+    Concrete per-trigger event names are configured per-tenant against Mambu
+    entity events; the enumerated list above reflects the documented entity
+    domains, not a fabricated event registry.
+streaming_api:
+  type: event-stream
+  delivery: resumable cursor-based stream (position saved across reconnects)
+  independence: independent from the Mambu API and webhook infrastructure
+  availability: add-on, activated via Customer Success Manager
+  docs: https://docs.mambu.com/api/pages/streaming/streaming-index/
+asyncapi_spec:
+  published: false
+  note: Mambu does not publish an AsyncAPI document for these surfaces.
