@@ -1,8 +1,28 @@
 aid: mambu
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/mambu.png
 name: Mambu
-description: 'Mambu is a company surfaced as a portfolio company of bessemer-venture-partners, point-nine
-  and added to the API Evangelist network as a stub for enrichment. Sector: fintech. This profile is a
-  lead awaiting the enrichment pipeline.'
+description: >-
+  Mambu is a SaaS cloud banking platform — a composable, API-first core banking
+  engine that financial institutions use to build and run lending, deposit,
+  payment, and Islamic banking products. Banks, neobanks, fintechs, lenders, and
+  non-financial brands (telcos, retailers) use Mambu to modernize legacy cores
+  and launch products faster, operating across 65+ countries and serving 230M+
+  end users. Mambu exposes a REST API v2 (with separate Payments, Streaming, and
+  Audit Trail APIs), customizable webhooks, and a resumable event-streaming
+  surface, secured with HTTPS Basic auth or apikey headers and supporting
+  Idempotency-Key for safe writes.
 url: https://raw.githubusercontent.com/api-evangelist/mambu/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -13,11 +33,31 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
 - Fintech
-apis: []
+- Banking
+- Core Banking
+- Lending
+- Deposits
+- Payments
+- SaaS
+- Embedded Finance
+- Banking as a Service
+apis:
+- name: Mambu API v2
+  description: >-
+    Mambu's REST API v2 for core banking — clients, loan accounts, deposit
+    accounts, transactions, and related resources. Tenant-scoped host, HTTPS
+    Basic or apikey auth, Idempotency-Key supported for writes.
+  humanURL: https://docs.mambu.com/api/pages/api-v2/welcome/
+  baseURL: https://tenant.mambu.com/api
+  properties:
+  - type: Documentation
+    url: https://docs.mambu.com/api/
+  - type: Authentication
+    url: authentication/mambu-authentication.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -26,3 +66,48 @@ maintainers:
 common:
 - type: Website
   url: https://www.mambu.com/
+- type: DeveloperPortal
+  url: https://docs.mambu.com/api/
+- type: Documentation
+  url: https://docs.mambu.com/
+- type: APIReference
+  url: https://docs.mambu.com/api/
+- type: Support
+  url: https://support.mambu.com/
+- type: StatusPage
+  url: https://status.mambu.com/
+- type: PrivacyPolicy
+  url: https://www.mambu.com/en/legal/privacy-policy
+- type: ChangeLog
+  url: https://docs.mambu.com/release-notes/
+- type: Authentication
+  url: authentication/mambu-authentication.yml
+- type: Conventions
+  url: conventions/mambu-conventions.yml
+- type: Idempotency
+  url: conventions/mambu-conventions.yml
+- type: Webhooks
+  url: asyncapi/mambu-events.yml
+- type: Lifecycle
+  url: lifecycle/mambu-lifecycle.yml
+- type: Deprecation
+  url: https://docs.mambu.com/api/
+- type: Conformance
+  url: conformance/mambu-conformance.yml
+- type: DomainSecurity
+  url: security/mambu-domain-security.yml
+- type: LLMsTxt
+  url: llms/mambu-llms.txt
+- type: MCPServer
+  url: mcp/mambu-mcp.yml
+- type: Packages
+  url: packages/mambu-packages.yml
+- type: SDKs
+  url: packages/mambu-packages.yml
+- type: GitHubOrganization
+  url: https://github.com/mambu-gmbh
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 11
+  pass: local-v1
