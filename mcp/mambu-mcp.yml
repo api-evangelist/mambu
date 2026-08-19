@@ -2,36 +2,42 @@ generated: '2026-07-20'
 method: searched
 status: published
 source: https://github.com/mambu-gmbh/mmcp-brew
-note: >-
-  Mambu publishes an official MCP server, MMCP (mambu-gmbh), a Model Context
-  Protocol server that lets AI agents discover and execute REST API operations
-  described by OpenAPI specifications. It ships with a complete catalog for the
-  Mambu Banking Platform V2 API. Distributed as a Homebrew tap; runs in stdio
-  mode by default (subprocess over stdin/stdout, works with Claude Desktop,
-  Claude Code, Junie CLI and other MCP clients) with an optional standalone HTTP
-  server mode. Rather than one tool per operation, MMCP exposes two generic
-  tools (search + invoke) that operate over the bundled Mambu V2 catalog.
+note: Mambu publishes an official MCP server, MMCP (mambu-gmbh), a Model Context Protocol server that
+  lets AI agents discover and execute REST API operations described by OpenAPI specifications. It ships
+  with a complete catalog for the Mambu Banking Platform V2 API. Distributed as a Homebrew tap; runs in
+  stdio mode by default (subprocess over stdin/stdout, works with Claude Desktop, Claude Code, Junie CLI
+  and other MCP clients) with an optional standalone HTTP server mode. Rather than one tool per operation,
+  MMCP exposes two generic tools (search + invoke) that operate over the bundled Mambu V2 catalog.
 server:
   name: mmcp
   repo: https://github.com/mambu-gmbh/mmcp-brew
   transport: stdio
-  transports: [stdio, http]
+  transports:
+  - stdio
+  - http
   http_default_bind: 0.0.0.0:8081
   catalog: reference-apis/mambu/catalog.yaml
   platforms:
-    - macos-arm64 (Apple Silicon)
-    - linux-amd64
-    - linux-arm64
-  install: |
-    brew tap mambu-gmbh/mmcp-brew https://github.com/mambu-gmbh/mmcp-brew
+  - macos-arm64 (Apple Silicon)
+  - linux-amd64
+  - linux-arm64
+  install: 'brew tap mambu-gmbh/mmcp-brew https://github.com/mambu-gmbh/mmcp-brew
+
     brew install mmcp
+
     mmcp setup --catalog $(brew --prefix)/share/mmcp/reference-apis/mambu/catalog.yaml
+
+    '
 tools:
-  - name: search
-    description: >-
-      Accepts a natural-language query (e.g. "list all clients") and returns
-      matching Mambu V2 API operations with parameter schemas and usage guidance.
-  - name: invoke
-    description: >-
-      Executes a discovered API operation using labels from search results,
-      parameters, and an optional request body.
+- name: search
+  description: Accepts a natural-language query (e.g. "list all clients") and returns matching Mambu V2
+    API operations with parameter schemas and usage guidance.
+- name: invoke
+  description: Executes a discovered API operation using labels from search results, parameters, and an
+    optional request body.
+deployment:
+  mode: local-stdio
+  verified: searched
+  tools: 2
+  checked: '2026-08-12'
+  source: catalog MCP census
