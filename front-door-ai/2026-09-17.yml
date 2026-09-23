@@ -1,0 +1,27 @@
+# Front Door AI Index — mambu — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: mambu
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.mambu.com
+  final_host: mambu.com
+  ownership: own
+  owner: mambu
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 8
+  host_score: 8
+  density: 34.93
+  words: 229
+  tiers:
+    agentic: 3
+    core: 5
+    model: 0
+  ambiguous: 1
+  top_terms:
+    AI: 5
+    agentic: 3
+    intelligence: 1
