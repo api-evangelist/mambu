@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/mambu/integrations
+- https://n8n.io/integrations/mambu/
+- https://composio.dev/toolkits/mambu
+- https://monid.ai/tools/mambu
+checked:
+- https://composio.dev/toolkits/mambu
+- https://monid.ai/tools/mambu
+- https://n8n.io/integrations/mambu/
+- https://zapier.com/apps/mambu/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
