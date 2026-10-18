@@ -40,7 +40,7 @@
     - connectors/applications/mambu
     vendor_link: https://mambu.com/
     builder: Fivetran
-  status: pending-partner-spec
+  status: not-a-workflow
   arazzo: null
 - slug: mambu-meltano
   label: Meltano
@@ -71,5 +71,5 @@
     quality:
     - silver
     builder: 'community (Meltano Hub variant maintainers: bytecodeio, singer-io)'
-  status: pending-partner-spec
+  status: not-a-workflow
   arazzo: null
