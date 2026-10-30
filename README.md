@@ -64,6 +64,104 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Mambu is a company surfaced as a portfolio company of bessemer-venture-partners, point-nine and added to the API Evangelist network as a stub for enrichment. Sector: fintech. This profile is a lead awaiting the enrichment pipeline.
+Mambu is a SaaS cloud banking platform — a composable, API-first core banking engine that financial institutions use to build and run lending, deposit, payment, and Islamic banking products. Banks, neobanks, fintechs, lenders, and non-financial brands (telcos, retailers) use Mambu to modernize legacy cores and launch products faster, operating across 65+ countries and serving 230M+ end users. Mambu exposes a REST API v2 (with separate Payments, Streaming, and Audit Trail APIs), customizable webhooks, and a resumable event-streaming surface, secured with HTTPS Basic auth or apikey headers and supporting Idempotency-Key for safe writes.
 
-Backed by: bessemer-venture-partners, point-nine — https://www.mambu.com/
+**Areas:** Company · Fintech · Banking · Core Banking · Lending · Deposits · Payments · Software-as-a-Service · Embedded Finance · Banking as a Service
+
+## Mambu on APIs.io
+
+Everything profiled for Mambu is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/mambu/](https://apis.io/providers/mambu/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Mambu API v2](https://apis.io/apis/mambu/mambu-api-v2/) — Mambu's REST API v2 for core banking — clients, loan accounts, deposit accounts, transactions, and related resources. Tenant-scoped host, HTTPS Basic or…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Mambu Events](https://apis.io/asyncapis/mambu/mambu-events/)
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [mmcp](https://apis.io/servers/mambu/mmcp/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Mambu Authentication](https://apis.io/security/mambu/mambu-authentication/)
+- [Mambu Domain Security](https://apis.io/security/mambu/mambu-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.mambu.com/)
+- [Documentation](https://docs.mambu.com/)
+- [API reference](https://docs.mambu.com/api/)
+- [Support](https://support.mambu.com/)
+- [Changelog](https://docs.mambu.com/release-notes/)
+- [Blog](https://mambu.com/en/insights/articles)
+- [Privacy policy](https://www.mambu.com/en/legal/privacy-policy)
+- [GitHub](https://github.com/mambu-gmbh)
+- [Status](https://status.mambu.com/)
+
+## API Evangelist rating
+
+**Kin Score 35.5** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 71.7 |
+| Contract quality | 39.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 34.2 |
+| Developer ergonomics | 52.4 |
+| Access clarity | 10.5 |
+
+**Agent readiness 26.5** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | documented (partial credit) |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | yes |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.5** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/mambu/](https://apis.io/providers/mambu/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Mambu: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/mambu/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
